@@ -2,4 +2,79 @@
 @import 'fonts';
 @import 'reset';
 @import 'global';
+
+.header {
+  padding: 40px 0;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+  }
+
+  &__item+&__item {
+    margin-left: 35px;
+  }
+
+  &__item &__link {
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    color: $title;
+    @extend %quicksand-400;
+    border-bottom: 1px solid transparent;
+    transition: all 0.5s;
+
+    &:hover {
+      color: $accent;
+      border-bottom: 1px solid $accent;
+      @extend %quicksand-500;
+    }
+  }
+
+  &__link--active {
+    color: $accent;
+    @extend %quicksand-500;
+    border-bottom: 1px solid $accent;
+  }
+}
+
+.user-nav {
+  display: flex;
+
+  &__link {
+    position: relative;
+  }
+
+  &__link+&__link {
+    padding-left: 25px;
+  }
+
+  &__number {
+    position: absolute;
+    top: -9px;
+    right: -14px;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
+    background-color: $accent;
+    color: #fff;
+  }
+}
+
+
+
+
+
+
+
 @import 'media';
