@@ -22,24 +22,24 @@
     margin-left: 35px;
   }
 
-  &__item &__link {
+  &__link {
     padding-bottom: 5px;
     text-transform: uppercase;
     color: $title;
-    @extend %quicksand-400;
+    @extend %roboto-500;
     border-bottom: 1px solid transparent;
     transition: all 0.5s;
 
     &:hover {
       color: $accent;
       border-bottom: 1px solid $accent;
-      @extend %quicksand-500;
+      @extend %roboto-700;
     }
   }
 
   &__link--active {
     color: $accent;
-    @extend %quicksand-500;
+    @extend %roboto-700;
     border-bottom: 1px solid $accent;
   }
 }
@@ -70,6 +70,7 @@
     color: #fff;
   }
 }
+
 
 
 
