@@ -71,6 +71,72 @@
   }
 }
 
+.top-slider {
+  @include bg-img;
+  background-color: $bg;
+  padding-top: 65px;
+  // display: block;
+
+  &__items-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__inner {
+    max-width: 560px;
+    padding-top: 135px;
+    padding-bottom: 200px;
+  }
+
+  &__title {
+    @extend %roboto-700;
+    color: $title;
+    font-size: 48px;
+    margin-bottom: 40px;
+
+    & span {
+      display: block;
+    }
+  }
+
+  &__descr {
+    margin-bottom: 60px;
+  }
+
+  &__btn {
+    @include btn;
+    padding: 19px 32px 19px 35px;
+
+    &:hover {
+      @include btn-hover;
+    }
+  }
+  &__images {
+    display: block;
+  }
+}
+
+
+
+.top-slider__wrapper {}
+
+
+
+.top-slider__inner {}
+
+.top-slider__title {}
+
+.top-slider__descr {}
+
+.top-slider .top-slider__images {}
+
+
+
+
+
+
+
 .footer {
   background-color: $bg;
   padding: 75px 0 25px;
@@ -162,21 +228,12 @@
   }
 
   &__btn {
+    @include btn;
     padding: 18px 26px;
-    text-transform: uppercase;
-    @extend %roboto-400;
-    line-height: 1;
-    background-color: $accent;
-    color: #fff;
-    box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
     border: none;
-    transition: all 1s ease-in;
 
     &:hover {
-      background-color: transparent;
-      color: $accent;
-      outline: 1px solid $accent;
-
+      @include btn-hover;
     }
   }
 }
