@@ -75,7 +75,7 @@
   @include bg-img;
   background-color: $bg;
   padding-top: 65px;
-  margin-bottom: 100px;
+  margin-bottom: 120px;
 
   &__items-wrapper {
     display: flex;
@@ -159,6 +159,89 @@
     }
   }
 }
+
+
+
+
+
+.support {
+  margin-bottom: 120px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__items {
+    max-width: 370px;
+    padding: 160px 40px 60px 40px;
+    background-color: #fff;
+    box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+  }
+
+  &__title {
+    @extend %roboto-400;
+    position: relative;
+    margin-bottom: 18px;
+    font-size: 22px;
+    line-height: 1.2;
+    color: $title;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      top: -100px;
+    }
+  }
+
+  &__title--order {
+    &::before {
+      @include bg-img;
+      background-color: #ffb534;
+      background-image: url('../images/icons/support-order.svg');
+    }
+  }
+
+  &__title--return {
+    &::before {
+      @include bg-img;
+      background-color: #34c3ff;
+      background-image: url('../images/icons/support-return.svg');
+    }
+  }
+
+  &__title--help {
+    &::before {
+      @include bg-img;
+      background-color: $accent;
+      background-image: url('../images/icons/support-help.svg');
+    }
+  }
+}
+
+
+
+
+.container {}
+
+.support {}
+
+.support__items {}
+
+.support__title {}
+
+.support__text {}
+
+
+
+
+
+
+
+
+
 
 .footer {
   background-color: $bg;
